@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EasterEggComponent } from './components/easter-egg/easter-egg.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EasterEggComponent
   ],
   imports: [
     BrowserModule,
