@@ -8,14 +8,14 @@ import { MainshopComponent } from './components/mainshop/mainshop.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 import { PanierComponent } from './components/panier/panier.component';
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './components/template/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EasterEggComponent,
     MainshopComponent,
-    ThankyouComponent
+    ThankyouComponent,
     PanierComponent,
     FormulaireComponent,
     HeaderComponent
