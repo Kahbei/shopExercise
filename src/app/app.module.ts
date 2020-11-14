@@ -4,11 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EasterEggComponent } from './components/easter-egg/easter-egg.component';
-import { MainshopComponent } from './components/mainshop/mainshop.component';
+import { MainshopComponent } from './cheese-shop//components/mainshop/mainshop.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
-import { PanierComponent } from './components/panier/panier.component';
+import { PanierComponent } from './cheese-shop/components/panier/panier.component';
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
 import { HeaderComponent } from './components/template/header/header.component';
+import { CheeseShopComponent } from './cheese-shop/cheese-shop.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,11 @@ import { HeaderComponent } from './components/template/header/header.component';
     ThankyouComponent,
     PanierComponent,
     FormulaireComponent,
-    HeaderComponent
+    HeaderComponent,
+    CheeseShopComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
