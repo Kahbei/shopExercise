@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { EasterEggComponent } from './components/easter-egg/easter-egg.component';
 import { MainshopComponent } from './components/mainshop/mainshop.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
+import { PanierComponent } from './components/panier/panier.component';
+import { FormulaireComponent } from './components/formulaire/formulaire.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { ThankyouComponent } from './components/thankyou/thankyou.component';
     EasterEggComponent,
     MainshopComponent,
     ThankyouComponent
+    PanierComponent,
+    FormulaireComponent
   ],
   imports: [
     BrowserModule,
