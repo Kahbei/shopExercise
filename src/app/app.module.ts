@@ -8,6 +8,7 @@ import { MainshopComponent } from './components/mainshop/mainshop.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
 import { PanierComponent } from './components/panier/panier.component';
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormulaireComponent } from './components/formulaire/formulaire.componen
     MainshopComponent,
     ThankyouComponent
     PanierComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
