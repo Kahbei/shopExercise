@@ -11,6 +11,7 @@ import { FormulaireComponent } from './components/formulaire/formulaire.componen
 import { HeaderComponent } from './components/template/header/header.component';
 import { CheeseShopComponent } from './cheese-shop/cheese-shop.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,7 @@ import { CheeseShopComponent } from './cheese-shop/cheese-shop.component';
     PanierComponent,
     FormulaireComponent,
     HeaderComponent,
-    CheeseShopComponent,
+    CheeseShopComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
