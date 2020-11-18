@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Cheese } from './cheese.model';
+import { Cheese } from '../../model/cheese.model';
+import cheeses from '../../model/cheese.json';
 
 @Component({
   selector: 'app-mainshop',
@@ -7,7 +8,7 @@ import { Cheese } from './cheese.model';
   styleUrls: ['./mainshop.component.css'],
 })
 export class MainshopComponent implements OnInit {
-  @Input() fromage: Cheese;
+  cheeseList: Object = cheeses;
 
   constructor() {}
 

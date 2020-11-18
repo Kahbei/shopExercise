@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cheese } from './model/cheese.model';
 
 @Component({
   selector: 'app-root',
