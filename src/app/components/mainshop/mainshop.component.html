@@ -1,8 +1,6 @@
 <div class="container">
     <div class="row">
-
         <div *ngFor="let fromage of cheeseList">
-
             <div class="col-6 col-sm-3 my-4">
                 <div class="card" style="width: 18rem;">
                     <img class="img-fromage w-75 h-50 p-3 mx-auto" src="{{fromage.image}}" alt="...">
@@ -10,12 +8,10 @@
                         <h5 class="card-title">{{ fromage.name }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{ fromage.category }}</h6>
                         <p class="card-text text-right"> {{ fromage.price.toFixed(2) }} €</p>
-                        <a href="" class="btn btn-primary">Ajouter au panier</a>
+                        <button routerLink="panier" class="btn btn-primary">Ajouter au panier</button>
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
 </div>
