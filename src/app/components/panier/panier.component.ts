@@ -8,9 +8,11 @@ import cheeses from '../../model/cheese.json';
   styleUrls: ['./panier.component.css']
 })
 export class PanierComponent implements OnInit {
-	panierList: Cheese[
-		
+	panierList: object = [
+		new Cheese("test","test",2,"test")
 	];
+
+	
 
   constructor() { }
 
