@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Cheese } from '../../model/cheese.model';
 import cheeses from '../../model/cheese.json';
-import { PanierComponent } from '../panier/panier.component';
+import { ShopService } from '../../shop.service';
 
 @Component({
   selector: 'app-mainshop',
@@ -10,14 +9,15 @@ import { PanierComponent } from '../panier/panier.component';
 })
 export class MainshopComponent implements OnInit {
   cheeseList: Object = cheeses;
+  panierList = [];
 
-  constructor() {}
+  constructor(private http: ShopService) {}
 
   ngOnInit(): void {}
 
+  // Peut-être à retravailler vu l'utilisation du service http
   ajouterPanier(cheese) {
-    let panierList = [];
-    panierList.push(cheese);
-    return panierList;
+    this.panierList.push(cheese);
+    this.http.addToCart(this.panierList).subscribe();
   }
 }
