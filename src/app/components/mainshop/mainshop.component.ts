@@ -16,6 +16,6 @@ export class MainshopComponent implements OnInit {
   ngOnInit(): void {}
 
   ajouterPanier(Cheese){
-		PanierComponent.panierList
+		//PanierComponent.panierList
 	}
 }
