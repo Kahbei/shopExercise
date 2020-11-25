@@ -18,6 +18,6 @@ export class MainshopComponent implements OnInit {
   // Peut-être à retravailler vu l'utilisation du service http
   ajouterPanier(cheese) {
     this.panierList.push(cheese);
-    this.http.addToCart(this.panierList).subscribe();
+    this.http.addToCart(this.panierList);
   }
 }

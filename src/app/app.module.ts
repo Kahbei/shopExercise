@@ -9,6 +9,7 @@ import { ThankyouComponent } from './components/thankyou/thankyou.component';
 import { PanierComponent } from './components/panier/panier.component';
 import { FormulaireComponent } from './components/formulaire/formulaire.component';
 import { HeaderComponent } from './components/template/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { HeaderComponent } from './components/template/header/header.component';
     FormulaireComponent,
     HeaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
