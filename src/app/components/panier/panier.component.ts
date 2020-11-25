@@ -9,7 +9,8 @@ import cheeses from '../../model/cheese.json';
 })
 export class PanierComponent implements OnInit {
 	panierList: object = [
-		new Cheese("test","test",2,"test")
+		new Cheese("nom fromgae","test",2,"test"),
+		new Cheese("fromage2","",3,""),
 	];
 
 	
