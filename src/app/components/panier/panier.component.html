@@ -1,7 +1,20 @@
 <div class="container">
     <div class="row">
-        <div *ngFor="let Cheese of panierList">
-            <p>{{Cheese.name}}</p>
-        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Category</th>
+                <th scope="col">Prix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let fromage of panier">
+                <th scope="row">{{ fromage.name }}</th>
+                <td>{{ fromage.category }}</td>
+                <td>{{ fromage.price }}</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 </div>
