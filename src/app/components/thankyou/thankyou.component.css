@@ -2,30 +2,29 @@
 HEADER
 */
 .header {
-    width: 100;
-    margin-left: 0;
-    margin-right: 0;
-    height: 70;
-    line-height: 70;
-    background-color: black;
-    position: fixed;
-    top: 0;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  height: 70%;
+  line-height: 70%;
+  background-color: black;
+  position: fixed;
+  top: 0;
 }
 
 .header .header-logo {
-   color: darkgreen;
-   font-family: 'Montserrat' , sans-serif;
-   float: left;
-   margin-left: 30px;
+  color: darkgreen;
+  font-family: "Montserrat", sans-serif;
+  float: left;
+  margin-left: 30px;
 }
 
 .header .header-menu {
-    float: right;
-    margin-right: 30px;
+  float: right;
+  margin-right: 30px;
 }
 
 .header .header-menu a {
-    margin-right: 15px;
-    color: darkgreen;
+  margin-right: 15px;
+  color: darkgreen;
 }
-
