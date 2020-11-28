@@ -17,12 +17,12 @@ export class MainshopComponent implements OnInit {
       .subscribe((cheeselist) => (this.cheeseList = cheeselist));
   }
 
-  ajouterPanier(idCheese, cheese): void {
+  addToPanier(idCheese, quantity): void {
     const panierList = {
       id: idCheese,
-      cheese,
+      quantity,
     };
-    this.http.addToCart(panierList).subscribe((e) => {
+    this.http.addToCart(panierList).subscribe(() => {
       this.getCheesesList();
       console.log('clodoman');
     });

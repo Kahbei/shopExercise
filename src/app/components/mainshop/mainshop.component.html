@@ -8,7 +8,7 @@
                         <h5 class="card-title">{{ fromage.name }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{ fromage.category }}</h6>
                         <p class="card-text text-right"> {{ fromage.price.toFixed(2) }} €</p>
-                        <button (click)="ajouterPanier(fromage)" routerLink="panier" class="btn btn-primary">Ajouter au panier</button>
+                        <button (click)="ajouterPanier(fromage.id, 1)" routerLink="panier" class="btn btn-primary">Ajouter au panier</button>
                     </div>
                 </div>
             </div>
