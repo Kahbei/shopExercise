@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cheese } from 'src/app/model/cheese.model';
 import { ShopService } from '../../shop.service';
 
 @Component({
@@ -8,15 +9,19 @@ import { ShopService } from '../../shop.service';
 })
 export class PanierComponent implements OnInit {
   panier;
+  test = [];
 
-  constructor(private http: ShopService) {
-    console.log('fuck ', this.panier);
-  }
+  constructor(private http: ShopService) {}
 
   getCartItems(): void {
-    this.http.getCart().subscribe((panier) => {
-      this.panier = panier;
-      console.log(this.panier);
+    this.http.getCart().subscribe((panier: Cheese) => {
+      this.test.push({
+        id: panier.id,
+        name: panier.name,
+        quantity: 1,
+        price: panier.price,
+      });
+      console.log('Dans panier : ' + this.test + ' panier : ' + panier);
     });
   }
 

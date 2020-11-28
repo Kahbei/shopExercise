@@ -17,15 +17,9 @@ export class MainshopComponent implements OnInit {
       .subscribe((cheeselist) => (this.cheeseList = cheeselist));
   }
 
-  addToPanier(idCheese, quantity): void {
-    const panierList = {
-      id: idCheese,
-      quantity,
-    };
-    this.http.addToCart(panierList).subscribe(() => {
-      this.getCheesesList();
-      console.log('clodoman');
-    });
+  addToPanier(cheese): void {
+    this.http.addToCart(cheese);
+    console.log(cheese);
   }
 
   ngOnInit(): void {
