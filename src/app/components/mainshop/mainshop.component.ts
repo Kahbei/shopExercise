@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import cheeses from '../../model/cheese.json';
+import { Component, OnInit } from '@angular/core';
 import { ShopService } from '../../shop.service';
 
 @Component({
@@ -8,16 +7,28 @@ import { ShopService } from '../../shop.service';
   styleUrls: ['./mainshop.component.css'],
 })
 export class MainshopComponent implements OnInit {
-  cheeseList: Object = cheeses;
-  panierList = [];
+  cheeseList;
 
   constructor(private http: ShopService) {}
 
-  ngOnInit(): void {}
+  getCheesesList(): void {
+    this.http
+      .getCheeses()
+      .subscribe((cheeselist) => (this.cheeseList = cheeselist));
+  }
 
-  // Peut-être à retravailler vu l'utilisation du service http
-  ajouterPanier(cheese) {
-    this.panierList.push(cheese);
-    this.http.addToCart(this.panierList);
+  ajouterPanier(idCheese, cheese): void {
+    const panierList = {
+      id: idCheese,
+      cheese,
+    };
+    this.http.addToCart(panierList).subscribe((e) => {
+      this.getCheesesList();
+      console.log('clodoman');
+    });
+  }
+
+  ngOnInit(): void {
+    this.getCheesesList();
   }
 }

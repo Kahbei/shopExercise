@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Cheese } from '../../model/cheese.model';
-import cheeses from '../../model/cheese.json';
 import { ShopService } from '../../shop.service';
 
 @Component({
@@ -11,9 +9,11 @@ import { ShopService } from '../../shop.service';
 export class PanierComponent implements OnInit {
   panier;
 
-  constructor(private http: ShopService) {}
+  constructor(private http: ShopService) {
+    console.log('fuck ', this.panier);
+  }
 
-  getCartItems() {
+  getCartItems(): void {
     this.http.getCart().subscribe((panier) => {
       this.panier = panier;
       console.log(this.panier);
