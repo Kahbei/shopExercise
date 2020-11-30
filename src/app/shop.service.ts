@@ -16,14 +16,19 @@ export class ShopService {
     return of(CHEESE);
   }
 
+  // En cours de construction DO NOT TOUCH PLS
+  // getCheeses() {
+  //   return this.http.get(`${environment.baseURL}/`);
+  // }
+
   addToCart(cart) {
-    this.panier.push(cart)
+    this.panier.push(cart);
     //console.log('hello ' + this.panier)
-    return
+    return;
   }
 
-  getPanier(){
-    return this.panier
+  getPanier() {
+    return this.panier;
   }
 
   getCart() {
