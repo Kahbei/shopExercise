@@ -19,7 +19,6 @@ export class MainshopComponent implements OnInit {
 
   addToPanier(cheese): void {
     this.http.addToCart(cheese);
-    console.log(cheese);
   }
 
   ngOnInit(): void {

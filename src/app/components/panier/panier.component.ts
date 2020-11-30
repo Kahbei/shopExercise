@@ -14,15 +14,7 @@ export class PanierComponent implements OnInit {
   constructor(private http: ShopService) {}
 
   getCartItems(): void {
-    this.http.getCart().subscribe((panier: Cheese) => {
-      this.test.push({
-        id: panier.id,
-        name: panier.name,
-        quantity: 1,
-        price: panier.price,
-      });
-      console.log('Dans panier : ' + this.test + ' panier : ' + panier);
-    });
+    this.http.getCart();
   }
 
   ngOnInit(): void {
