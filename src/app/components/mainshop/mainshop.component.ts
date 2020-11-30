@@ -8,6 +8,7 @@ import { ShopService } from '../../shop.service';
 })
 export class MainshopComponent implements OnInit {
   cheeseList;
+  panier = []
 
   constructor(private http: ShopService) {}
 
@@ -19,6 +20,11 @@ export class MainshopComponent implements OnInit {
 
   addToPanier(cheese): void {
     this.http.addToCart(cheese);
+  }
+
+  recupPanier(){
+    this.panier = this.http.getPanier();
+    console.log(this.panier)
   }
 
   ngOnInit(): void {

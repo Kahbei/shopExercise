@@ -10,13 +10,20 @@ import { Cheese } from './model/cheese.model';
 })
 export class ShopService {
   constructor(private http: HttpClient) {}
+  panier = [];
 
   getCheeses(): Observable<Cheese[]> {
     return of(CHEESE);
   }
 
   addToCart(cart) {
-    // va ajouter les articles dans le panier
+    this.panier.push(cart)
+    //console.log('hello ' + this.panier)
+    return
+  }
+
+  getPanier(){
+    return this.panier
   }
 
   getCart() {

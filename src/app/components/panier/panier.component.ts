@@ -18,6 +18,7 @@ export class PanierComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getCartItems();
+    this.panier = this.http.getPanier();
+    //console.log(this.panier)
   }
 }
