@@ -6,8 +6,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const database = 'mongodb://angularman:123angu&@ds157233.mlab.com:57233/shop-angular?retryWrites=false';
-//const database = process.env.DATABASEURL || "mongodb://localhost/angular-shop";
+const database = process.env.DATABASEURL || "mongodb://localhost/angular-shop";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
