@@ -11,25 +11,15 @@ import { Cheese } from './model/cheese.model';
 export class ShopService {
   constructor(private http: HttpClient) {}
   panier = [];
-  dansPanier = false;
 
-  // getCheeses(): Observable<Cheese[]> {
-  //   return of(CHEESE);
-  // }
-
-  // En cours de construction DO NOT TOUCH PLS
   getCheeses() {
     return this.http.get(`${environment.baseURL}/api/cheese`);
   }
 
   addToCart(cart) {
-    const Object = {
-      quantite: 1,
-    };
     cart.quantite = 1;
     this.panier.push(cart);
-    //console.log('hello ' + this.panier)
-    return;
+    return this.panier;
   }
 
   getPanier() {
@@ -43,19 +33,22 @@ export class ShopService {
   /*
   Avant d'ajouter dans le panier
   Regarder s'il existe déjà
-  true = quantite++
-  false = on ajoute dans panier
   */
   verifDoubon(cart) {
-    this.panier.forEach(function (value) {
+    this.panier.map((value) => {
       if (value.name === cart.name) {
         value.quantite++;
-        this.dansPanier = true;
       }
     });
-    if (this.dansPanier === false) {
-      //mettre dans panier
+    if (!this.panier.some((e) => e.name === cart.name)) {
       this.addToCart(cart);
+    }
+  }
+
+  // Return the total of item in the cart
+  getTotalItemCart() {
+    if (this.panier.some((e) => e.hasOwnProperty('quantite'))) {
+      return `(${this.panier.map((a) => a.quantite).reduce((a, b) => a + b)})`;
     }
   }
 }
