@@ -13,8 +13,16 @@ export class PanierComponent implements OnInit {
 
   constructor(private http: ShopService) {}
 
-  getCartItems(): void {
-    this.http.getCart();
+  // getCartItems(): void {
+  //   this.http.getCart();
+  // }
+
+  ajoutFromage(Cheese){
+    Cheese.quantite++
+  }
+
+  suppressionFromage(Cheese){
+    Cheese.quantite--
   }
 
   ngOnInit(): void {

@@ -11,6 +11,7 @@ import { Cheese } from './model/cheese.model';
 export class ShopService {
   constructor(private http: HttpClient) {}
   panier = [];
+  dansPanier = false;
 
   getCheeses(): Observable<Cheese[]> {
     return of(CHEESE);
@@ -22,6 +23,10 @@ export class ShopService {
   // }
 
   addToCart(cart) {
+    const Object = {
+      quantite: 1,
+    };
+    cart.quantite = 1;
     this.panier.push(cart);
     //console.log('hello ' + this.panier)
     return;
@@ -31,7 +36,26 @@ export class ShopService {
     return this.panier;
   }
 
-  getCart() {
-    // Va retourner la panier
+  // getCart() {
+  //   // Va retourner la panier
+  // }
+
+  /*
+  Avant d'ajouter dans le panier
+  Regarder s'il existe déjà
+  true = quantite++
+  false = on ajoute dans panier
+  */
+  verifDoubon(cart) {
+    this.panier.forEach(function (value) {
+      if (value.name === cart.name) {
+        value.quantite++;
+        this.dansPanier = true;
+      }
+    });
+    if (this.dansPanier === false) {
+      //mettre dans panier
+      this.addToCart(cart);
+    }
   }
 }

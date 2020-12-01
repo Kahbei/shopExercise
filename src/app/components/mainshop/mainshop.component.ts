@@ -27,6 +27,10 @@ export class MainshopComponent implements OnInit {
     console.log(this.panier)
   }
 
+  verifPanier(cheese){
+    this.http.verifDoubon(cheese)
+  }
+
   ngOnInit(): void {
     this.getCheesesList();
   }

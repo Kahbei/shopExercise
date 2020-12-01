@@ -5,7 +5,9 @@
               <tr>
                 <th scope="col">Nom</th>
                 <th scope="col">Category</th>
-                <th scope="col">Prix</th>
+                <th scope="col">Prix (unitaire)</th>
+                <th scope="col">Quantité</th>
+                <th scope="col">Prix (total)</th>
               </tr>
             </thead>
             <tbody>
@@ -13,6 +15,8 @@
                 <th scope="row">{{ fromage.name }}</th>
                 <td>{{ fromage.category }}</td>
                 <td>{{ fromage.price.toFixed(2) }} €</td>
+                <td>{{ fromage.quantite}}</td>
+                <td>{{ (fromage.price * fromage.quantite).toFixed(2) }}<button (click)="ajoutFromage(fromage)">+</button><button (click)="suppressionFromage(fromage)">-</button></td>
               </tr>
             </tbody>
           </table>
