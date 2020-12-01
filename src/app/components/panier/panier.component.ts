@@ -13,33 +13,28 @@ export class PanierComponent implements OnInit {
 
   constructor(private http: ShopService) {}
 
-  // getCartItems(): void {
-    //   this.http.getCart();
-    // }
-
-    ajoutFromage(Cheese){
-      if (Cheese.quantite >= 0) {
-        Cheese.quantite++
-      }
-
-    }
-
-    suppressionFromage(Cheese){
-      if (Cheese.quantite > 0) {
-        Cheese.quantite--
-      }
-    }
-
-    calculPrix(){
-      this.total = 0;
-      this.panier.forEach(function (value) {
-        this.total = value.quantite * value.price
-      })
-      return this.total
-    }
-
-    ngOnInit(): void {
-      this.panier = this.http.getPanier();
-      //console.log(this.panier)
+  ajoutFromage(cheese) {
+    if (cheese.quantite >= 0) {
+      cheese.quantite++;
     }
   }
+
+  enleverFromage(cheese) {
+    if (cheese.quantite > 0) {
+      cheese.quantite--;
+    }
+  }
+
+  //Attention danger bug si décommenter
+  calculPrix() {
+    // this.panier.map((value) => {
+    //   this.total += value.quantite * value.price;
+    // });
+    // return this.total;
+  }
+
+  ngOnInit(): void {
+    this.panier = this.http.getPanier();
+    console.log(this.panier);
+  }
+}
