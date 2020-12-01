@@ -23,15 +23,11 @@ export class ShopService {
   }
 
   addToCart(cart) {
-<<<<<<< HEAD
     const Object = {
       quantite:1,
     }
     cart.quantite = 1
-    this.panier.push(cart)
-=======
     this.panier.push(cart);
->>>>>>> 315e5668c2f3df7c9627f56377d1678771f55429
     //console.log('hello ' + this.panier)
     return;
   }
