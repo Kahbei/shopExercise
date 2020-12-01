@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const Cheese = require('../models/cheeseModel');
+const cors = require('cors');
 
-router.get('/', async (req, res, next) => {
+router.get('/',cors(), async (req, res, next) => {
     try {
-        let cheeses = await Cheese.find({});
+        let cheeses = await Cheese.find();
         res.send(cheeses);
     } catch (error) {
         next(error);

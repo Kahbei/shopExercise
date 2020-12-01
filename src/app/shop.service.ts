@@ -13,14 +13,14 @@ export class ShopService {
   panier = [];
   dansPanier = false;
 
-  getCheeses(): Observable<Cheese[]> {
-    return of(CHEESE);
-  }
+  // getCheeses(): Observable<Cheese[]> {
+  //   return of(CHEESE);
+  // }
 
   // En cours de construction DO NOT TOUCH PLS
-  // getCheeses() {
-  //   return this.http.get(`${environment.baseURL}/`);
-  // }
+  getCheeses() {
+    return this.http.get(`${environment.baseURL}/api/cheese`);
+  }
 
   addToCart(cart) {
     const Object = {
