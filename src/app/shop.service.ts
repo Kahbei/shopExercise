@@ -13,22 +13,31 @@ export class ShopService {
   panier = [];
   dansPanier = false;
 
-  getCheeses(): Observable<Cheese[]> {
-    return of(CHEESE);
+  // getCheeses(): Observable<Cheese[]> {
+  //   return of(CHEESE);
+  // }
+
+  // En cours de construction DO NOT TOUCH PLS
+  getCheeses() {
+    return this.http.get(`${environment.baseURL}/api/cheese`);
   }
 
   addToCart(cart) {
+<<<<<<< HEAD
     const Object = {
       quantite:1,
     }
     cart.quantite = 1
     this.panier.push(cart)
+=======
+    this.panier.push(cart);
+>>>>>>> 315e5668c2f3df7c9627f56377d1678771f55429
     //console.log('hello ' + this.panier)
-    return
+    return;
   }
 
-  getPanier(){
-    return this.panier
+  getPanier() {
+    return this.panier;
   }
 
   // getCart() {
