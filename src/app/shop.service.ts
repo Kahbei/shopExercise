@@ -12,14 +12,14 @@ export class ShopService {
   constructor(private http: HttpClient) {}
   panier = [];
 
-  getCheeses(): Observable<Cheese[]> {
-    return of(CHEESE);
-  }
+  // getCheeses(): Observable<Cheese[]> {
+  //   return of(CHEESE);
+  // }
 
   // En cours de construction DO NOT TOUCH PLS
-  // getCheeses() {
-  //   return this.http.get(`${environment.baseURL}/`);
-  // }
+  getCheeses() {
+    return this.http.get(`${environment.baseURL}/api/cheese`);
+  }
 
   addToCart(cart) {
     this.panier.push(cart);
