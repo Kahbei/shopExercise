@@ -25,12 +25,12 @@ export class PanierComponent implements OnInit {
     }
   }
 
-  //Attention danger bug si décommenter
   calculPrix() {
-    // this.panier.map((value) => {
-    //   this.total += value.quantite * value.price;
-    // });
-    // return this.total;
+    this.total = 0;
+    this.panier.map((value) => {
+      this.total += value.quantite * value.price;
+    });
+    return this.total;
   }
 
   ngOnInit(): void {
