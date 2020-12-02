@@ -22,10 +22,6 @@ export class MainshopComponent implements OnInit {
     this.http.addToCart(cheese);
   }
 
-  recupPanier() {
-    this.panier = this.http.getPanier();
-  }
-
   verifPanier(cheese) {
     this.http.verifDoubon(cheese);
   }

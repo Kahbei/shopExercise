@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'easteregg',
     component: EasterEggComponent,
   },
+  {
+    path: '**',
+    component: FormulaireComponent,
+  },
 ];
 
 @NgModule({

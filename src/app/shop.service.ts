@@ -48,7 +48,8 @@ export class ShopService {
   // Return the total of item in the cart
   getTotalItemCart() {
     if (this.panier.some((e) => e.hasOwnProperty('quantite'))) {
-      return `(${this.panier.map((a) => a.quantite).reduce((a, b) => a + b)})`;
+      return this.panier.map((a) => a.quantite).reduce((a, b) => a + b);
     }
+    return 0;
   }
 }
