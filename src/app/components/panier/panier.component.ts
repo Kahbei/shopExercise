@@ -23,9 +23,9 @@ export class PanierComponent implements OnInit {
     if (cheese.quantite > 0) {
       cheese.quantite--;
     }
-    if (cheese.quantite === 0){
-      console.log("cheese delete => " + cheese.name)
-      this.supprimerFromage(cheese)
+    if (cheese.quantite === 0) {
+      console.log('cheese delete => ' + cheese.name);
+      this.supprimerFromage(cheese);
     }
   }
 
@@ -37,13 +37,12 @@ export class PanierComponent implements OnInit {
     return this.total;
   }
 
-  supprimerFromage(cheese){
+  supprimerFromage(cheese) {
     this.panier.map((value) => {
-      if (cheese.name === value.name){
-        console.log("info : " + cheese.name)
-        this.panier.splice(cheese.name, 1);
+      if (cheese.name === value.name) {
+        this.panier.splice(this.panier.indexOf(value), 1);
       }
-    })
+    });
   }
 
   ngOnInit(): void {
