@@ -16,11 +16,11 @@
           <td>{{ fromage.category }}</td>
           <td>{{ fromage.price.toFixed(2) }} €</td>
           <td>{{ fromage.quantite}}
-            <button (click)="ajoutFromage(fromage)" class="btn btn-success">+</button>
-            <button (click)="enleverFromage(fromage)" class="btn btn-danger">-</button>
+            <button (click)="ajoutFromage(fromage)" class="btn btn-outline-success">+</button>
+            <button (click)="enleverFromage(fromage)" class="btn btn-outline-danger">-</button>
           </td>
           <td>{{ (fromage.price * fromage.quantite).toFixed(2) }}</td>
-          <td><button (click)="supprimerFromage(fromage)" class="btn btn-danger">-</button></td>
+          <td><button (click)="supprimerFromage(fromage)" class="btn btn-danger">X</button></td>
         </tr>
         <tr>
           <td></td>
@@ -31,6 +31,6 @@
         </tr>
       </tbody>
     </table>
-    <button routerLink="formulaire" type="button" class="btn btn-primary btn-lg btn-block btn btn-primary">Finaliser ma commande</button>
+    <button routerLink="**" type="button" class="btn btn-primary btn-lg btn-block btn btn-primary">Finaliser ma commande</button>
   </div>
 </div>
