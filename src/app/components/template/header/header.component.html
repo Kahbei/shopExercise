@@ -16,13 +16,7 @@
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" routerLink="panier"><img src='./assets/images/BoutonPanier.png' id='BoutonPanier'> <span class="badge badge-light">{{ getTotalItem() }}</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="formulaire">page formulaire</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="thankyou">page remerciement</a>
+                <a class="nav-link" routerLink="panier"><i class="fas fa-shopping-cart"></i> {{ getTotalItem() }}</a>
             </li>
         </ul>
     </div>

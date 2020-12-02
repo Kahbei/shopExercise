@@ -25,12 +25,8 @@ const routes: Routes = [
     component: ThankyouComponent,
   },
   {
-    path: 'easteregg',
-    component: EasterEggComponent,
-  },
-  {
     path: '**',
-    component: FormulaireComponent,
+    component: EasterEggComponent,
   },
 ];
 
