@@ -2,6 +2,7 @@ const router = require('express').Router();
 const Cheese = require('../models/cheeseModel');
 const cors = require('cors');
 
+// SELECT
 router.get('/',cors(), async (req, res, next) => {
     try {
         let cheeses = await Cheese.find();
@@ -11,6 +12,7 @@ router.get('/',cors(), async (req, res, next) => {
     }
 });
 
+// CREATE
 // router.post('/new_cheese', async (req, res, next) => {
 //     try {
 //         let newCheese = new Cheese(req.body);
@@ -21,6 +23,7 @@ router.get('/',cors(), async (req, res, next) => {
 //     }
 // });
 
+// SELECT one, UPDATE one, DELETE one
 // router.route('/:cheese_id')
 //         .get(async (req, res, next) => {
 //             try {

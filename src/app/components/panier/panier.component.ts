@@ -29,9 +29,8 @@ export class PanierComponent implements OnInit {
     }
   }
 
-  //Attention danger bug si décommenter
   calculPrix() {
-    this.total = 0
+    this.total = 0;
     this.panier.map((value) => {
       this.total += value.quantite * value.price;
     });
