@@ -9,24 +9,32 @@ import { ShopService } from '../../shop.service';
 })
 export class PanierComponent implements OnInit {
   panier;
-  test = [];
+  total = 0;
 
   constructor(private http: ShopService) {}
 
-  // getCartItems(): void {
-  //   this.http.getCart();
-  // }
-
-  ajoutFromage(Cheese){
-    Cheese.quantite++
+  ajoutFromage(cheese) {
+    if (cheese.quantite >= 0) {
+      cheese.quantite++;
+    }
   }
 
-  suppressionFromage(Cheese){
-    Cheese.quantite--
+  enleverFromage(cheese) {
+    if (cheese.quantite > 0) {
+      cheese.quantite--;
+    }
+  }
+
+  //Attention danger bug si décommenter
+  calculPrix() {
+    // this.panier.map((value) => {
+    //   this.total += value.quantite * value.price;
+    // });
+    // return this.total;
   }
 
   ngOnInit(): void {
     this.panier = this.http.getPanier();
-    //console.log(this.panier)
+    console.log(this.panier);
   }
 }

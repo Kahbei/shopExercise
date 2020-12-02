@@ -24,11 +24,10 @@ export class MainshopComponent implements OnInit {
 
   recupPanier() {
     this.panier = this.http.getPanier();
-    console.log(this.panier);
   }
 
-  verifPanier(cheese){
-    this.http.verifDoubon(cheese)
+  verifPanier(cheese) {
+    this.http.verifDoubon(cheese);
   }
 
   ngOnInit(): void {

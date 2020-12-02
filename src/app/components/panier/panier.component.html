@@ -15,10 +15,11 @@
                 <th scope="row">{{ fromage.name }}</th>
                 <td>{{ fromage.category }}</td>
                 <td>{{ fromage.price.toFixed(2) }} €</td>
-                <td>{{ fromage.quantite}}</td>
-                <td>{{ (fromage.price * fromage.quantite).toFixed(2) }}<button (click)="ajoutFromage(fromage)">+</button><button (click)="suppressionFromage(fromage)">-</button></td>
+                <td>{{ fromage.quantite}}<button (click)="ajoutFromage(fromage)">+</button><button (click)="enleverFromage(fromage)">-</button></td>
+                <td>{{ (fromage.price * fromage.quantite).toFixed(2) }}</td>
               </tr>
             </tbody>
           </table>
     </div>
 </div>
+<p>{{ calculPrix() }}</p>
