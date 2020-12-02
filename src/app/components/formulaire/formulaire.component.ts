@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulaire.component.css']
 })
 export class FormulaireComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  name: string;
+  email: string;
+  message: string;
+    constructor() { }
+  
+    ngOnInit(): void {
+    }
+  validationForm(){
+    const myInfo = `Mon nom est ${this.name}. Mon email est ${this.email}. Mon message est ${this.message}.`
+    alert(myInfo)
   }
-
-}
+  }
+  
