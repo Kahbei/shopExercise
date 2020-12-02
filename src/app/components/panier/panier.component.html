@@ -1,25 +1,36 @@
 <div class="container">
-    <div class="row">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Nom</th>
-                <th scope="col">Category</th>
-                <th scope="col">Prix (unitaire)</th>
-                <th scope="col">Quantité</th>
-                <th scope="col">Prix (total)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let fromage of panier">
-                <th scope="row">{{ fromage.name }}</th>
-                <td>{{ fromage.category }}</td>
-                <td>{{ fromage.price.toFixed(2) }} €</td>
-                <td>{{ fromage.quantite}}<button (click)="ajoutFromage(fromage)">+</button><button (click)="enleverFromage(fromage)">-</button></td>
-                <td>{{ (fromage.price * fromage.quantite).toFixed(2) }}</td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nom</th>
+          <th scope="col">Category</th>
+          <th scope="col">Prix (unitaire)</th>
+          <th scope="col">Quantité</th>
+          <th scope="col">Prix (total)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fromage of panier">
+          <th scope="row">{{ fromage.name }}</th>
+          <td>{{ fromage.category }}</td>
+          <td>{{ fromage.price.toFixed(2) }} €</td>
+          <td>{{ fromage.quantite}}
+            <button (click)="ajoutFromage(fromage)" class="btn btn-success">+</button>
+            <button (click)="enleverFromage(fromage)" class="btn btn-danger">-</button>
+          </td>
+          <td>{{ (fromage.price * fromage.quantite).toFixed(2) }}</td>
+          <td><button (click)="supprimerFromage(fromage)" class="btn btn-danger">-</button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td> total : {{ (calculPrix()).toFixed(2) }} €</td>
+        </tr>
+      </tbody>
+    </table>
+    <button routerLink="formulaire" type="button" class="btn btn-primary btn-lg btn-block btn btn-primary">Finaliser ma commande</button>
+  </div>
 </div>
-<p>{{ calculPrix() }}</p>
