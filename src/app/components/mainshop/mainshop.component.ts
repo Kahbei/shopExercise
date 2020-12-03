@@ -8,7 +8,8 @@ import { ShopService } from '../../shop.service';
 })
 export class MainshopComponent implements OnInit {
   cheeseList;
-
+  category;
+  data= [];
   constructor(private http: ShopService) {}
 
   getCheesesList(): void {
@@ -28,4 +29,14 @@ export class MainshopComponent implements OnInit {
   ngOnInit(): void {
     this.getCheesesList();
   }
+ /* SelectedCategoryCheese(category:string){
+ 
+    this.cheeselist.forEach(cheeseList => {
+    if(cheeseList.category === category) {this.data.push(cheeseList);}
+    else if(category ==='All'){this.data.push(cheeseList);}
+    });
+  }
+  GetChesseCategory(){
+    return this.data;
+  }*/
 }

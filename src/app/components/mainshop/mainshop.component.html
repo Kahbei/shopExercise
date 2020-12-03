@@ -1,6 +1,19 @@
+
+       <div class="btn-group-vertical">
+       <!-- <button type="button" class="btn btn-secondary" [value]="All" (change)="SelectedCategoryCheese">All</button>
+        <button type="button" class="btn btn-secondary" [value]="Vache" (change)="SelectedCategoryCheese">Vache</button>
+        <button type="button" class="btn btn-secondary" [value]="Chèvre" (change)="SelectedCategoryCheese">Chèvre</button>
+        <button type="button" class="btn btn-secondary" [value]="Brebis" (change)="SelectedCategoryCheese">Brebis</button>
+        <button type="button" class="btn btn-secondary" [value]="Autre" (change)="SelectedCategoryCheese">Autre</button>-->
+        <button type="button" class="btn btn-secondary">All</button>
+        <button type="button" class="btn btn-secondary">Vache</button>
+        <button type="button" class="btn btn-secondary">Chèvre</button>
+        <button type="button" class="btn btn-secondary">Brebis</button>
+        <button type="button" class="btn btn-secondary">Autre</button>
+       </div>
 <div class="container">
-    <div class="row">
-        <div *ngFor="let fromage of cheeseList">
+     <div class="row">
+        <div *ngFor="let fromage of cheeseList" id=Test>
             <div class="col-6 col-sm-3 my-4">
                 <div class="card" style="width: 18rem;">
                     <img class="img-fromage w-75 h-50 p-3 mx-auto" src="/assets/images/{{fromage.image}}" alt="...">
@@ -15,3 +28,4 @@
         </div>
     </div>
 </div>
+
