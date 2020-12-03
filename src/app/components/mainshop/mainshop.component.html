@@ -1,12 +1,12 @@
 
     <div class="d-none d-lg-block col-lg-2 fixed-bottom side">
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-action"><a (click)="selectCategory('all')">Tout les fromages</a></li>
-            <li class="list-group-item list-group-item-action"><a (click)="selectCategory('Brebis')">Brebis</a></li>
-            <li class="list-group-item list-group-item-action"><a (click)="selectCategory('Chevre')">Chèvre</a></li>
-            <li class="list-group-item list-group-item-action"><a (click)="selectCategory('Vache')">Vache</a></li>
-            <li class="list-group-item list-group-item-action"><a (click)="selectCategory('Autre')">Autre</a></li>
-        </ul>
+        <div class="list-group">
+           <a class="list-group-item list-group-item-action" (click)="selectCategory('all')">Tout les fromages</a>
+           <a class="list-group-item list-group-item-action" (click)="selectCategory('Brebis')">Brebis</a>
+           <a class="list-group-item list-group-item-action" (click)="selectCategory('Chevre')">Chèvre</a>
+           <a class="list-group-item list-group-item-action" (click)="selectCategory('Vache')">Vache</a>
+           <a class="list-group-item list-group-item-action" (click)="selectCategory('Autre')">Autre</a>
+        </div>
     </div>
 <div class="container">
      <div class="row">

@@ -35,12 +35,9 @@ export class MainshopComponent implements OnInit {
     if(cheeseList.category === category) {this.data.push(cheeseList);}
     else if(category ==='All'){this.data.push(cheeseList);}
     });
-  }
-  GetChesseCategory(){
-    return this.data;
   }*/
 
   selectCategory(category: String) {
-    //
+    return (this.category = category);
   }
 }
