@@ -26,10 +26,6 @@ export class ShopService {
     return this.panier;
   }
 
-  // getCart() {
-  //   // Va retourner la panier
-  // }
-
   /*
   Avant d'ajouter dans le panier
   Regarder s'il existe déjà

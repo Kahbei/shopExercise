@@ -9,7 +9,7 @@ import { ShopService } from '../../shop.service';
 export class MainshopComponent implements OnInit {
   cheeseList;
   category;
-  data = [];
+
   constructor(private http: ShopService) {}
 
   getCheesesList(): void {
@@ -26,18 +26,38 @@ export class MainshopComponent implements OnInit {
     this.http.verifDoubon(cheese);
   }
 
-  ngOnInit(): void {
-    this.getCheesesList();
-  }
-  /* SelectedCategoryCheese(category:string){
- 
-    this.cheeselist.forEach(cheeseList => {
-    if(cheeseList.category === category) {this.data.push(cheeseList);}
-    else if(category ==='All'){this.data.push(cheeseList);}
-    });
-  }*/
-
   selectCategory(category: String) {
     return (this.category = category);
+  }
+
+  displayCategory(listC) {
+    /*switch (this.category) {
+      case 'Vache':
+        listC.some((e) => e.hasOwnProperty('quantite'))
+        break;
+
+      case 'Brebis':
+        listC.some((e) => e.hasOwnProperty('quantite'))
+        break;
+
+      case 'Chevre':
+        listC.some((e) => e.hasOwnProperty('quantite'))
+        break;
+
+      case 'Autre':
+        listC.some((e) => e.hasOwnProperty('quantite'))
+        break;
+
+      default:
+        break;
+    }*/
+    /*this.cheeselist.forEach(cheeseList => {
+    if(cheeseList.category === category) {this.data.push(cheeseList);}
+    else if(category ==='All'){this.data.push(cheeseList);}
+    });*/
+  }
+
+  ngOnInit(): void {
+    this.getCheesesList();
   }
 }
