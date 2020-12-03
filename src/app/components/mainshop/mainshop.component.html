@@ -1,16 +1,13 @@
 
-       <div class="btn-group-vertical">
-       <!-- <button type="button" class="btn btn-secondary" [value]="All" (change)="SelectedCategoryCheese">All</button>
-        <button type="button" class="btn btn-secondary" [value]="Vache" (change)="SelectedCategoryCheese">Vache</button>
-        <button type="button" class="btn btn-secondary" [value]="Chèvre" (change)="SelectedCategoryCheese">Chèvre</button>
-        <button type="button" class="btn btn-secondary" [value]="Brebis" (change)="SelectedCategoryCheese">Brebis</button>
-        <button type="button" class="btn btn-secondary" [value]="Autre" (change)="SelectedCategoryCheese">Autre</button>-->
-        <button type="button" class="btn btn-secondary">All</button>
-        <button type="button" class="btn btn-secondary">Vache</button>
-        <button type="button" class="btn btn-secondary">Chèvre</button>
-        <button type="button" class="btn btn-secondary">Brebis</button>
-        <button type="button" class="btn btn-secondary">Autre</button>
-       </div>
+    <div class="d-none d-lg-block col-lg-2 fixed-bottom side">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action"><a (click)="selectCategory('all')">Tout les fromages</a></li>
+            <li class="list-group-item list-group-item-action"><a (click)="selectCategory('Brebis')">Brebis</a></li>
+            <li class="list-group-item list-group-item-action"><a (click)="selectCategory('Chevre')">Chèvre</a></li>
+            <li class="list-group-item list-group-item-action"><a (click)="selectCategory('Vache')">Vache</a></li>
+            <li class="list-group-item list-group-item-action"><a (click)="selectCategory('Autre')">Autre</a></li>
+        </ul>
+    </div>
 <div class="container">
      <div class="row">
         <div *ngFor="let fromage of cheeseList" id=Test>
