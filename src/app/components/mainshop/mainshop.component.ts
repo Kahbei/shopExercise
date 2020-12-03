@@ -8,7 +8,6 @@ import { ShopService } from '../../shop.service';
 })
 export class MainshopComponent implements OnInit {
   cheeseList;
-  panier = [];
 
   constructor(private http: ShopService) {}
 
